@@ -1,0 +1,21 @@
+{
+  "name":"splunk",
+  "description":"Roll-up role for Glance.",
+  "json_class":"Chef::Role",
+  "default_attributes":{
+    "chef-splunk":{
+      "accept_license":"true",
+      "inputs_conf":{
+        "ports":"1337"
+      }
+    }
+  },
+  "override_attributes": {
+  },
+  "chef_type":"role",
+  "run_list":[
+    "recipe[splunk::server]"
+  ],
+  "env_run_lists":{ 
+  }
+}

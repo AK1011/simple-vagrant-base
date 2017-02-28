@@ -1,0 +1,13 @@
+[default]
+host = <%= node['fqdn'] %>-default
+
+[monitor:/var/log/osquery/]
+disabled = 0
+sourtcetype = osquery
+
+INDEXED_EXTRACTIONS=json
+KV_MODE=none
+pulldown_type=true
+NO_BINARY_CHECK=1
+SHOULD_LINEMERGE = false
+TRUNCATE = 0
